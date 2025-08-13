@@ -5,7 +5,7 @@ import csv
 
 #--- Configurations ----
 
-input_directory = rf"Y:\Split\Retail\GPMI\202507-23_DataSet\InvoicesGPMI"
+input_directory = rf"Y:\Split\Retail\GPMI\202507-23_DataSet\test"
 expected_delimiters = None
 delimeter= "|"
 

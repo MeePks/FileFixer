@@ -1,7 +1,7 @@
 import os
 import csv
 
-input_directory = 'C:/path/to/your/directory'  # Update this path
+input_directory = rf'Y:\Split\Retail\GPMI\202507-23_DataSet\test'  # Update this path
 expected_delimiters = None  # Set to None to auto-detect based on the first valid line
 delimeter = '|'  # Change this to your expected delimiter
 
@@ -16,7 +16,8 @@ def detect_line_ending(sample):
 
 
 for filename in os.listdir(input_directory):
-    if(filename.endswith('.txt')):
+    if(filename.endswith('GPMI.txt')):
+        expected_delimiters = None
         input_path= os.path.join(input_directory, filename)
         print(f"Processing file: {input_path}")
         ouptut_path = os.path.join(input_directory, filename.replace('.txt', '_fixed.txt'))
